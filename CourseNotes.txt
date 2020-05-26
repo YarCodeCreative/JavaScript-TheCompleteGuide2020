@@ -1,0 +1,15 @@
+
+
+
+Template Literal Contstruct:    
+    -Allows you to use $ to reference a variable/constant in a string
+    -Must use back tick in place of quotations
+    -Extra white space or tabs are sent to the browser. BE CAREFUL
+    -ex.:    let calculationDescription = `(${defaultResult} + 10 * 57)`;
+
+To Renter Line Breaks:
+    -\n
+    -can be used inside quotations or back ticks
+
+JAVASCRIPT VS TYPESCRIPT
+    -
