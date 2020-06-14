@@ -1,17 +1,44 @@
 const defaultResult = 0;
-let currentResult = 0;
+let currentResult = defaultResult;
 
-// a function does not need to end with a semi-colon
-function add(num1, num2) {
-    const result = num1 + num2;
-    alert('The result is ' + result);
+function getUserInput() {
+    return parseInt(userInput.value);
+}
+
+function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
+    const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
+    outputResult(currentResult, calcDescription);
+}
+
+function add() {
+    const enteredNumber = getUserInput();
+    const initialResult = currentResult;
+    currentResult = currentResult + enteredNumber;
+    createAndWriteOutput('+', initialResult, enteredNumber);
 } 
 
-add(1, 2);
+function subtract() {
+    const enteredNumber = getUserInput();
+    const initialResult = currentResult;
+    currentResult = currentResult - enteredNumber;
+    createAndWriteOutput('-', initialResult, enteredNumber);
+}
 
-currentResult = currentResult + 10 * 3;
+function multiply() {
+    const enteredNumber = getUserInput();
+    const initialResult = currentResult;
+    currentResult = currentResult * enteredNumber;
+    createAndWriteOutput('x', initialResult, enteredNumber);
+}
 
-let calculationDescription = `(${defaultResult} + 10 * 57)`;
-let errorMessage = 'An error has occured.'
+function divide() {s
+    const enteredNumber = getUserInput();
+    const initialResult = currentResult;
+    currentResult = currentResult / enteredNumber;
+    createAndWriteOutput('/', initialResult, enteredNumber);
+}
 
-outputResult(currentResult, calculationDescription);
+addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);
