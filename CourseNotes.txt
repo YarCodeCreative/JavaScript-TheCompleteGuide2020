@@ -24,3 +24,10 @@ Converting Data Types:
     -ex: parseInt(userInput.value);  OR   +(userInput.value);
     -useing the + sign does not allow you to specify what kind of number you want
 
+Special Operators:
+    -currentResult = currentResult + enteredNumber; is the same as currentResult += enteredNumber;
+    -currentResult++ is the same as currentResult + 1
+    -currentResult-- is the same as currentResult - 1
+    -I you write it like this: --currentResult
+        if the operators are before the variable, it will return the value before the changes.
+        if its after, it will return the value after the changes. 
