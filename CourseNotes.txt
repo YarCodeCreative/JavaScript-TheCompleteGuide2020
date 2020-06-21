@@ -1,4 +1,4 @@
-
+COURSE NOTES:
 
 
 Template Literal Contstruct:    
@@ -31,3 +31,53 @@ Special Operators:
     -I you write it like this: --currentResult
         if the operators are before the variable, it will return the value before the changes.
         if its after, it will return the value after the changes. 
+
+Using Arrays:
+    -delcare an array in the declarations section of the js file:
+        let imAnArray = [];
+    -add an item to an array:
+        const item = 1;
+        imAnArray.push(item);
+    -access item:
+        item = imAnArray[0];
+    -see whats in the array through the console:
+        console.log(imAnArray);
+    -Arrays are of type Object
+
+Using Objects:
+    -declare an Object
+        const imAnObject{
+            imAKey: ImAValue,
+            imAnotherKey: imAnotherValue
+        } 
+    -Objects use key-value pairs
+    -Use commas to separare key-value pairs.
+    -Note that there is no ; after an object is created.
+    -Objects can be sent to arrays
+
+null / undefined / NAN:
+    -undefined is the default value of uninitialized variables. 
+        Never assign undefinded as a value manually
+    -null is never assumed by default. 
+        You can assign this to a value if you want to reset or clear a variable.
+    -NAN stands for 'not a number'. Technically its not its own type, but it is a number type
+         and can be used in caluculations.
+        It yields a new NAN and its the result of invalid calculations (e.g. 3 * hi).
+
+typeof keyword:
+    can be used to evaluate a variable
+
+Defer keyword when loading scripts:
+    -use the defer keyword in order to download scripts while the HTML file is 
+        being parsed, but load them after its done. Otherwise parsing the HTML file
+        will be paused until the scripts are executed. This helps speed up load times
+    -call the scripts within the head element of the HTML file
+    -the oder of script execution is preserved
+    e.g.    <script src="assets/scripts/vendor.js" defer></script>
+
+async keyword when loading scripts:
+    -allows you to download and execute the script file even if the HTML file 
+        is not done being parsed. do this if the script does not rely on the HTML file
+    -async causes the script to load as soon as possible. Therefore the order of execution is
+        not guaranteed.
+     e.g.   <script src="assets/scripts/vendor.js" async></script>
