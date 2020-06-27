@@ -81,3 +81,24 @@ async keyword when loading scripts:
     -async causes the script to load as soon as possible. Therefore the order of execution is
         not guaranteed.
      e.g.   <script src="assets/scripts/vendor.js" async></script>
+
+===  /   !==
+    -triple === checks for value and type
+    -double == just checks for value
+    - e.g.      2 === "2" 
+                false
+    -prefer to use === vs == to force you to write better code.
+
+&&   ||
+    -AND is written as &&
+    -OR os written as ||
+
+Falsy and Truthy values
+    0   =   false
+    any other number including negatives        =   false
+    "" (empty string)                           =   true
+    any other non-empty sting including "false" =   true
+    {}. [], and all other obejects and arrays   =   true
+        (this includes empty arrays and objects)
+    null, undefinded, NaN                       =   false
+
